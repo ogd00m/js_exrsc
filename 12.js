@@ -9,19 +9,18 @@ class Worker {
         this.#rate = rate;
         this.#days = days;
     }
-    getSalary() {
-        console.log(this.#firstName + " " + this.#surname + " " + this.#rate * this.#days)
+    get Salary() {
+        return this.#rate * this.#days
     }
-    getFirstName(){
-        return this.#firstName;
+    get fullName(){
+        return `${this.#firstName} ${this.#surname}`;
     }
-    getSurname(){
+    get Surname(){
         return this.#surname;
     }
 }
 let worker1 = new Worker('Артём', 'Щербинский', 15000, 4)
 let worker2 = new Worker('Семён', 'Киреев', 14999, 5)
-worker1.getSalary()
-worker2.getSalary()
-console.log(worker1.getFirstName())
+console.log(worker1.Salary)
+console.log(worker1.fullName)
 
